@@ -25,3 +25,12 @@ sequenceDiagram
     D-->>S: User info
     S-->>U: Login response
 ```
+```mermaid
+stateDiagram-v2
+    [*] --> OrderPlaced
+    OrderPlaced --> OrderConfirmed: Confirm Order
+    OrderPlaced --> OrderCancelled: Cancel Order
+    OrderConfirmed --> OrderShipped: Ship Order
+    OrderCancelled --> [*]
+    OrderShipped --> [*]
+```
