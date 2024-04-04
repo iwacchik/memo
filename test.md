@@ -14,3 +14,14 @@ classDiagram
     Class01 : int gorilla
     Class08 <.. Class03 : Cool label
 ```
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant S as System
+    participant D as Database
+    
+    U->>S: Login request
+    S->>D: Query user info
+    D-->>S: User info
+    S-->>U: Login response
+```
